@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width:33.3333%;
+  height:33.3333%;
+  background-color: magenta;
+
+  i {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .box-title {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.8em;
+  }
+}
+
+
+#info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 66.6666%;
+  background-color: #35BC7A;
+  color: #fff;
+  padding: 2em;
+
+
+  h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+    letter-spacing: 0.04em;
+  }
+
+  .tagline {
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 0 0 .5rem;
+  }
+
+  .buttons {
+
+    button {
+      border: 2px solid;
+      background-color: transparent;
+      color: inherit;
+      padding: 0.8em 1.5em;
+      font-size: .8em;
+      margin-right: 1em;
+      text-transform: uppercase;
+      transition: all 200ms;
+
+      &:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: #35BC7A;
+        cursor: pointer;
+      }
+
+      i {
+        margin-right: .5em;
+      }
+    }
+  }
+}
+
+#profile {
+  background-color: #FF9E00;
+}
+#experience {
+  background-color: #1E8BC4;
+}
+#education {
+  background-color: #F15A49;
+}
+#blog {
+  background-color: #35BC7A;
+}
+#social-menu {
+  background-color: #F86925;
+}
+#contact {
+  background-color: #1E8BC4;
+}
+#portfolio {
+  background-color: #F86925;
+}
+
+.slideshow {
+  height: 100vh;
+  min-width: 40%;
+  background: url('images/1.jpg');
+  background-size: cover;
+  background-position: center;
+}
