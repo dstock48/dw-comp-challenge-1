@@ -2,20 +2,76 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Muli', sans-serif;
   margin: 0;
+  height: 100%;
 }
 
 main {
   display: flex;
-  height: 100vh;
+}
+
+.slideshow {
+  position: relative;
+  min-height: 30%;
+  min-width: 40%;
+  background: url('images/1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  order: 1;
+
+  .page-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    cursor: pointer;
+    font-size: 0.8em;
+
+    i {
+      opacity: .3;
+      margin-left: .3em;
+
+      &:hover {
+        opacity: .6;
+      }
+
+      &.active {
+        opacity: .8;
+      }
+    }
+  }
+
+  .arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: .3;
+    position: absolute;
+    padding: 1rem;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+  #left-arrow {
+    left: 0;
+  }
+  #right-arrow {
+    right: 0;
+  }
 }
 
 .boxes {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-flow: row wrap;
+  width: 60%;
 }
 
 .box {
@@ -25,21 +81,46 @@ main {
   align-items: center;
   color: #fff;
   width:33.3333%;
-  height:33.3333%;
+  min-height:33.3333%;
   background-color: magenta;
+  transition: all 100ms;
+  font-size: 40px;
 
   i {
-    font-size: 3.5rem;
     margin-bottom: 0.5rem;
   }
 
   .box-title {
     text-transform: uppercase;
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.4em;
   }
 }
 
+.buttons {
+
+  button {
+    border: 2px solid;
+    background-color: transparent;
+    color: inherit;
+    padding: 0.8em 1.5em;
+    font-size: .8em;
+    margin-right: 1em;
+    text-transform: uppercase;
+    transition: all 200ms;
+
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #35BC7A;
+      cursor: pointer;
+    }
+
+    i {
+      margin-right: .5em;
+    }
+  }
+}
 
 #info {
   display: flex;
@@ -65,30 +146,6 @@ main {
     margin: 0 0 .5rem;
   }
 
-  .buttons {
-
-    button {
-      border: 2px solid;
-      background-color: transparent;
-      color: inherit;
-      padding: 0.8em 1.5em;
-      font-size: .8em;
-      margin-right: 1em;
-      text-transform: uppercase;
-      transition: all 200ms;
-
-      &:hover {
-        background-color: #fff;
-        border-color: #fff;
-        color: #35BC7A;
-        cursor: pointer;
-      }
-
-      i {
-        margin-right: .5em;
-      }
-    }
-  }
 }
 
 #profile {
@@ -140,64 +197,96 @@ main {
   }
 }
 #portfolio {
-  background-color: #F86925;
+  background-color: #db25f9;
 
   &:hover {
-    background-color: lighten(#F86925, 10%);
+    background-color: lighten(#db25f9, 10%);
     cursor: pointer;
   }
 }
 
-.slideshow {
-  position: relative;
-  height: 100vh;
-  min-width: 40%;
-  background: url('images/1.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
 
-  .page-dots {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1em;
+/*=======================================
+>>>>>>>>  MEDIA QUERIES  <<<<<<<<
+========================================*/
+@media (min-width: 1920px) {
+  body {
+    font-size: 30px;
+  }
 
-    i {
-      margin-left: .3em;
-    }
+  .box {
+    font-size: 80px;
+  }
+}
 
-    i:not(:first-child) {
-      opacity: .5;
+@media (min-width: 1025px) {
+  main {
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+
+  .slideshow {
+    height: 400px;
+    order: -1;
+  }
+
+  .boxes {
+    width: 100%;
+  }
+
+  .box {
+    width: 50%;
+    min-height: 150px;
+    font-size: 40px;
+  }
+
+  #info {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    padding: 3em 3em;
+
+    .tagline {
+      display: inline-block;
+      width: 75%;
     }
   }
 
-  #left-arrow {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 3em;
-    opacity: .5;
-    padding: 1rem;
-
-    &:hover {
-      opacity: 1;
-      cursor: pointer;
-    }
+  #profile {
+    width: 100%;
   }
-  #right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    font-size: 3em;
-    opacity: .5;
-    padding: 1rem;
+}
 
-    &:hover {
-      opacity: 1;
-      cursor: pointer;
+@media (max-width: 768px) {
+  .slideshow {
+    height: 200px;
+  }
+
+  #info {
+    width: 100%;
+    font-size: 14px;
+    padding: 4em 3em;
+  }
+
+  .buttons button {
+    padding: 1.2em 1.9em;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 450px) {
+  .buttons button {
+    width: 100%;
+    margin: 0;
+    &:first-child {
+      margin-bottom: 1em;
     }
   }
 }
