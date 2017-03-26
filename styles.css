@@ -68,30 +68,84 @@ main {
 
 #profile {
   background-color: #FF9E00; }
+  #profile:hover {
+    background-color: #ffb133;
+    cursor: pointer; }
 
 #experience {
   background-color: #1E8BC4; }
+  #experience:hover {
+    background-color: #35a5e0;
+    cursor: pointer; }
 
 #education {
   background-color: #F15A49; }
+  #education:hover {
+    background-color: #f58578;
+    cursor: pointer; }
 
 #blog {
   background-color: #35BC7A; }
+  #blog:hover {
+    background-color: #55cf93;
+    cursor: pointer; }
 
 #social-menu {
   background-color: #F86925; }
+  #social-menu:hover {
+    background-color: #fa8b56;
+    cursor: pointer; }
 
 #contact {
   background-color: #1E8BC4; }
+  #contact:hover {
+    background-color: #35a5e0;
+    cursor: pointer; }
 
 #portfolio {
   background-color: #F86925; }
+  #portfolio:hover {
+    background-color: #fa8b56;
+    cursor: pointer; }
 
 .slideshow {
+  position: relative;
   height: 100vh;
   min-width: 40%;
   background: url("images/1.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  color: #fff; }
+  .slideshow .page-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em; }
+    .slideshow .page-dots i {
+      margin-left: .3em; }
+    .slideshow .page-dots i:not(:first-child) {
+      opacity: .5; }
+  .slideshow #left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: .5;
+    padding: 1rem; }
+    .slideshow #left-arrow:hover {
+      opacity: 1;
+      cursor: pointer; }
+  .slideshow #right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: .5;
+    padding: 1rem; }
+    .slideshow #right-arrow:hover {
+      opacity: 1;
+      cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */
