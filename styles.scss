@@ -1,3 +1,19 @@
+/*========================================
+>>>>>  C-O-L-O-R  V-A-R-I-A-B-L-E-S  <<<<<
+========================================*/
+
+$color1: #3095cd;
+$color2: #ec736a;
+$color3: #c675c9;
+$color4: #e7b855;
+$color5: #e38b3a;
+$color6: #0D9B93;
+$color7: #0E4A5D;
+
+/*=======================================
+>>>>>  G-E-N-E-R-A-L  S-T-Y-L-E-S  <<<<<<
+========================================*/
+
 * {
   box-sizing: border-box;
 }
@@ -9,34 +25,33 @@ html {
 body {
   font-family: 'Muli', sans-serif;
   margin: 0;
-  height: 100%;
 }
 
 main {
   display: flex;
+  height: 100%;
 }
 
 .slideshow {
   position: relative;
-  min-height: 30%;
-  min-width: 40%;
+  height: 100vh;
+  width: 40%;
   background: url('images/1.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
   order: 1;
-
   .page-dots {
     position: absolute;
     top: 0;
     right: 0;
     margin: 1em;
     cursor: pointer;
-    font-size: 0.8em;
+    font-size: .8em;
 
     i {
       opacity: .3;
-      margin-left: .3em;
+      margin-left: .3rem;
 
       &:hover {
         opacity: .6;
@@ -47,7 +62,6 @@ main {
       }
     }
   }
-
   .arrow {
     top: 50%;
     transform: translateY(-50%);
@@ -68,6 +82,67 @@ main {
   }
 }
 
+/*=======================================
+>>>>>>>>>  P-R-I-M-A-R-Y  B-O-X  <<<<<<<<
+========================================*/
+
+#info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 66.6666%;
+  background-color: #35BC7A;
+  color: #fff;
+  padding: 2em;
+
+
+  h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.04em;
+  }
+
+  .tagline {
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 1.4;
+    letter-spacing: 0.02rem;
+    margin: .7rem 0 1rem;
+  }
+}
+
+
+
+.buttons {
+
+  button {
+    border: 2px solid;
+    background-color: transparent;
+    color: inherit;
+    padding: 0.8em 1.5em;
+    font-size: .7em;
+    letter-spacing: 0.02rem;
+    margin-right: 1em;
+    text-transform: uppercase;
+    transition: all 200ms;
+
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #35BC7A;
+      cursor: pointer;
+    }
+    i {
+      margin-right: .5em;
+    }
+  }
+}
+
+/*=======================================
+>>>>>>>>  - B - O - X - E - S -  <<<<<<<<
+========================================*/
+
 .boxes {
   display: flex;
   flex-flow: row wrap;
@@ -81,159 +156,113 @@ main {
   align-items: center;
   color: #fff;
   width:33.3333%;
-  min-height:33.3333%;
-  background-color: magenta;
+  min-height: 33.3333%;
   transition: all 100ms;
-  font-size: 40px;
-
   i {
+    font-size: 4em;
     margin-bottom: 0.5rem;
   }
-
   .box-title {
     text-transform: uppercase;
     margin: 0;
-    font-size: 0.4em;
-  }
-}
-
-.buttons {
-
-  button {
-    border: 2px solid;
-    background-color: transparent;
-    color: inherit;
-    padding: 0.8em 1.5em;
     font-size: .8em;
-    margin-right: 1em;
-    text-transform: uppercase;
-    transition: all 200ms;
-
-    &:hover {
-      background-color: #fff;
-      border-color: #fff;
-      color: #35BC7A;
-      cursor: pointer;
-    }
-
-    i {
-      margin-right: .5em;
-    }
   }
-}
-
-#info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 66.6666%;
-  background-color: #35BC7A;
-  color: #fff;
-  padding: 2em;
-
-
-  h1 {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin: 0 0 1rem;
-    letter-spacing: 0.04em;
-  }
-
-  .tagline {
-    font-weight: 200;
-    font-size: 1em;
-    line-height: 1.4;
-    margin: 0 0 .5rem;
-  }
-
 }
 
 #profile {
-  background-color: #FF9E00;
-
+  background-color: $color1;
   &:hover {
-    background-color: lighten(#FF9E00, 10%);
+    background-color: lighten($color1, 15%);
     cursor: pointer;
   }
 }
+
 #experience {
-  background-color: #1E8BC4;
-
+  background-color: $color2;
   &:hover {
-    background-color: lighten(#1E8BC4, 10%);
+    background-color: lighten($color2, 15%);
     cursor: pointer;
   }
 }
+
 #education {
-  background-color: #F15A49;
-
+  background-color: $color3;
   &:hover {
-    background-color: lighten(#F15A49, 10%);
+    background-color: lighten($color3, 15%);
     cursor: pointer;
   }
 }
+
 #blog {
-  background-color: #35BC7A;
-
+  background-color: $color4;
   &:hover {
-    background-color: lighten(#35BC7A, 10%);
+    background-color: lighten($color4, 15%);
     cursor: pointer;
   }
 }
+
 #social-menu {
-  background-color: #F86925;
-
+  background-color: $color5;
   &:hover {
-    background-color: lighten(#F86925, 10%);
+    background-color: lighten($color5, 15%);
     cursor: pointer;
   }
 }
+
 #contact {
-  background-color: #1E8BC4;
-
+  background-color: $color6;
   &:hover {
-    background-color: lighten(#1E8BC4, 10%);
+    background-color: lighten($color6, 15%);
     cursor: pointer;
   }
 }
+
 #portfolio {
-  background-color: #db25f9;
-
+  background-color: $color7;
   &:hover {
-    background-color: lighten(#db25f9, 10%);
+    background-color: lighten($color7, 15%);
     cursor: pointer;
   }
 }
 
 
-/*=======================================
->>>>>>>>  MEDIA QUERIES  <<<<<<<<
+/*========================================
+>>>>>>>  M-E-D-I-A  Q-U-E-R-I-E-S  <<<<<<<
 ========================================*/
-@media (min-width: 1920px) {
+
+//  2000 and over
+@media (min-width: 2000px) {
   body {
     font-size: 30px;
   }
+}
 
-  .box {
-    font-size: 80px;
+// under 1175px
+@media (max-width: 1175px) {
+  #info {
+
+    .tagline {
+      font-size: 0.83em;
+    }
   }
 }
 
-@media (min-width: 1025px) {
-  main {
-    height: 100%;
-  }
-}
-
-
+// under 1024
 @media (max-width: 1024px) {
   main {
+    // height: 100%;
     flex-direction: column;
   }
 
   .slideshow {
-    height: 400px;
+    height: 50vh;
+    width: 100vw;
     order: -1;
+  }
+
+  .buttons button {
+    padding: 1.1em 1.7em;
+    font-size: 1em;
   }
 
   .boxes {
@@ -242,51 +271,101 @@ main {
 
   .box {
     width: 50%;
-    min-height: 150px;
-    font-size: 40px;
+    height: 25vh;
+    min-height: 125px;
+    font-size: 1em;
   }
 
   #info {
     align-items: center;
     text-align: center;
     width: 100%;
-    font-size: 14px;
-    padding: 3em 3em;
+    font-size: 1em;
+    height: 50vh;
+
+    h1 {
+      font-size: 2.5em;
+    }
 
     .tagline {
       display: inline-block;
-      width: 75%;
+      // width: 700px;
+      font-size: 1.4em;
     }
   }
+
 
   #profile {
     width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .slideshow {
-    height: 200px;
-  }
-
-  #info {
-    width: 100%;
-    font-size: 14px;
-    padding: 4em 3em;
-  }
-
-  .buttons button {
-    padding: 1.2em 1.9em;
-    font-size: 1em;
+// under 600px
+@media (max-width: 600px) {
+  #info{
+    .tagline {
+      font-size: 1em;
+    }
   }
 }
 
+// under 768
+@media (max-width: 768px) {
+  #info {
+    // font-size: 1em;
+  }
+}
+
+// under 420 height
+@media (max-height: 420px) {
+  #info {
+    font-size: 10px;
+  }
+  .boxes {
+    .box {
+      font-size: 8px;
+      min-height: 0;
+    }
+  }
+}
+
+// under 450
 @media (max-width: 450px) {
-  .buttons button {
-    width: 100%;
-    margin: 0;
-    &:first-child {
-      margin-bottom: 1em;
+  #info {
+    h1{
+      font-size: 1.5em;
+    }
+    .tagline {
+      font-size: 0.9em;
+      width: 200px;
+      .line1 {
+        display: inline-block;
+        margin-bottom: .5em;
+      }
+      .line2 {
+
+      }
+    }
+  }
+  .buttons {
+    button {
+      width: 100%;
+      margin: 0;
+      // padding: 0.5em 0.5em;
+      font-size: 0.8em;
+      &:first-child {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+// under 450
+@media (max-width: 350px) {
+
+  .buttons{
+    button {
+      padding: 0.5em 0;
     }
   }
 }
