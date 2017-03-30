@@ -18,6 +18,9 @@ main {
   display: flex;
   height: 100%; }
 
+/*========================================
+>>>  S-L-I-D-E-S-H-O-W  S-E-C-T-I-O-N <<<<
+========================================*/
 .slideshow {
   position: relative;
   height: 100vh;
@@ -64,6 +67,7 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 66.6666%;
+  height: 33.3333%;
   background-color: #35BC7A;
   color: #fff;
   padding: 2em; }
@@ -112,7 +116,7 @@ main {
   align-items: center;
   color: #fff;
   width: 33.3333%;
-  min-height: 33.3333%;
+  height: 33.3333%;
   transition: all 100ms; }
   .box i {
     font-size: 4em;
@@ -212,13 +216,23 @@ main {
 @media (max-width: 600px) {
   #info .tagline {
     font-size: 1em; } }
+@media (max-height: 550px) {
+  #info {
+    font-size: 12px; } }
 @media (max-height: 420px) {
   #info {
     font-size: 10px; }
+    #info .tagline {
+      font-size: 1.3em; }
+
+  .buttons button {
+    font-size: 1.2em; }
 
   .boxes .box {
     font-size: 8px;
-    min-height: 0; } }
+    min-height: 0; }
+    .boxes .box h3 {
+      font-size: 10px; } }
 @media (max-width: 450px) {
   #info h1 {
     font-size: 1.5em; }
@@ -232,11 +246,12 @@ main {
   .buttons button {
     width: 100%;
     margin: 0;
-    font-size: 0.8em; }
+    padding: 0.8em 0.4em;
+    font-size: 1em; }
     .buttons button:first-child {
       margin-bottom: 1em; } }
 @media (max-width: 350px) {
   .buttons button {
-    padding: 0.5em 0; } }
+    padding: 1em .5em; } }
 
 /*# sourceMappingURL=styles.css.map */

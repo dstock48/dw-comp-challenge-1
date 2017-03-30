@@ -32,6 +32,10 @@ main {
   height: 100%;
 }
 
+/*========================================
+>>>  S-L-I-D-E-S-H-O-W  S-E-C-T-I-O-N <<<<
+========================================*/
+
 .slideshow {
   position: relative;
   height: 100vh;
@@ -91,6 +95,7 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 66.6666%;
+  height: 33.3333%;
   background-color: #35BC7A;
   color: #fff;
   padding: 2em;
@@ -111,8 +116,6 @@ main {
     margin: .7rem 0 1rem;
   }
 }
-
-
 
 .buttons {
 
@@ -156,7 +159,7 @@ main {
   align-items: center;
   color: #fff;
   width:33.3333%;
-  min-height: 33.3333%;
+  height: 33.3333%;
   transition: all 100ms;
   i {
     font-size: 4em;
@@ -240,7 +243,6 @@ main {
 // under 1175px
 @media (max-width: 1175px) {
   #info {
-
     .tagline {
       font-size: 0.83em;
     }
@@ -309,22 +311,36 @@ main {
   }
 }
 
-// under 768
-@media (max-width: 768px) {
+// under 420 height
+@media (max-height: 550px) {
   #info {
-    // font-size: 1em;
+    font-size: 12px;
   }
+
 }
 
 // under 420 height
 @media (max-height: 420px) {
   #info {
     font-size: 10px;
+    .tagline {
+      font-size: 1.3em;
+    }
   }
+
+  .buttons {
+    button {
+      font-size: 1.2em;
+    }
+  }
+
   .boxes {
     .box {
       font-size: 8px;
       min-height: 0;
+      h3 {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -342,17 +358,14 @@ main {
         display: inline-block;
         margin-bottom: .5em;
       }
-      .line2 {
-
-      }
     }
   }
   .buttons {
     button {
       width: 100%;
       margin: 0;
-      // padding: 0.5em 0.5em;
-      font-size: 0.8em;
+      padding: 0.8em 0.4em;
+      font-size: 1em;
       &:first-child {
         margin-bottom: 1em;
       }
@@ -360,12 +373,12 @@ main {
   }
 }
 
-// under 450
+// under 350
 @media (max-width: 350px) {
 
   .buttons{
     button {
-      padding: 0.5em 0;
+      padding: 1em .5em;
     }
   }
 }
