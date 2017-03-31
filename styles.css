@@ -67,7 +67,7 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 66.6666%;
-  height: 33.3333%;
+  height: 33.3333vh;
   background-color: #35BC7A;
   color: #fff;
   padding: 2em; }
@@ -116,62 +116,51 @@ main {
   align-items: center;
   color: #fff;
   width: 33.3333%;
-  height: 33.3333%;
-  transition: all 100ms; }
+  height: 33.3333vh;
+  transition: all 200ms; }
   .box i {
     font-size: 4em;
     margin-bottom: 0.5rem; }
   .box .box-title {
     text-transform: uppercase;
     margin: 0;
-    font-size: .8em; }
+    font-size: 0.9em;
+    letter-spacing: 0.1em; }
+  .box:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 2em rgba(0, 0, 0, 0.6); }
 
 #profile {
   background-color: #3095cd; }
-  #profile:hover {
-    background-color: #6db5dd;
-    cursor: pointer; }
 
 #experience {
   background-color: #ec736a; }
-  #experience:hover {
-    background-color: #f5b3ae;
-    cursor: pointer; }
 
 #education {
   background-color: #c675c9; }
-  #education:hover {
-    background-color: #ddacdf;
-    cursor: pointer; }
 
 #blog {
   background-color: #e7b855; }
-  #blog:hover {
-    background-color: #f0d498;
-    cursor: pointer; }
 
 #social-menu {
   background-color: #e38b3a; }
-  #social-menu:hover {
-    background-color: #edb27d;
-    cursor: pointer; }
 
 #contact {
   background-color: #0D9B93; }
-  #contact:hover {
-    background-color: #13e2d6;
-    cursor: pointer; }
 
 #portfolio {
   background-color: #0E4A5D; }
-  #portfolio:hover {
-    background-color: #187f9f;
-    cursor: pointer; }
 
 /*========================================
 >>>>>>>  M-E-D-I-A  Q-U-E-R-I-E-S  <<<<<<<
 ========================================*/
+@media (min-width: 1300px) {
+  body {
+    font-size: 20px; } }
 @media (min-width: 2000px) {
+  body {
+    font-size: 25px; } }
+@media (min-width: 2400px) {
   body {
     font-size: 30px; } }
 @media (max-width: 1175px) {
