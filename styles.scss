@@ -28,8 +28,8 @@ body {
 }
 
 main {
-  display: flex;
-  height: 100%;
+  // display: flex;
+  height: 100vh;
 }
 
 /*========================================
@@ -37,8 +37,9 @@ main {
 ========================================*/
 
 .slideshow {
+  float: right;
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 40%;
   background: url('images/1.jpg');
   background-size: cover;
@@ -93,9 +94,11 @@ main {
 #info {
   display: flex;
   flex-direction: column;
+  float: left;
+  clear: right;
   justify-content: center;
   width: 66.6666%;
-  height: 33.3333vh;
+  height: 33.3333%;
   background-color: #35BC7A;
   color: #fff;
   padding: 2em;
@@ -147,19 +150,22 @@ main {
 ========================================*/
 
 .boxes {
-  display: flex;
-  flex-flow: row wrap;
+  // display: flex;
+  // flex-flow: row wrap;
   width: 60%;
+  float: left;
+  height: 100%;
 }
 
 .box {
   display: flex;
   flex-direction: column;
+  float: left;
   justify-content: center;
   align-items: center;
   color: #fff;
   width:33.3333%;
-  height: 33.3333vh;
+  height: 33.3333%;
   transition: all 200ms;
   i {
     font-size: 4em;
@@ -173,7 +179,8 @@ main {
   }
   &:hover {
     cursor: pointer;
-    box-shadow: inset 0px 0px 2em rgba(0,0,0,0.6);
+    border: .5em solid white;
+    // box-shadow: inset 0px 0px 2em rgba(0,0,0,0.6);
     // color: #000;
   }
 }
@@ -233,9 +240,9 @@ main {
 ========================================*/
 
 //  1300 and over
-@media (min-width: 1300px) {
+@media (min-width: 1350px) {
   body {
-    font-size: 20px;
+    font-size: 18.5px;
   }
 }
 //  2000 and over
@@ -265,7 +272,7 @@ main {
 @media (max-width: 1024px) {
   main {
     // height: 100%;
-    flex-direction: column;
+    // flex-direction: column;
   }
 
   .slideshow {
