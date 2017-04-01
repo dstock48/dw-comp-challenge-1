@@ -160,7 +160,7 @@ main {
   color: #fff;
   width:33.3333%;
   height: 33.3333vh;
-  transition: all 200ms;
+  transition: box-shadow 200ms;
   i {
     font-size: 4em;
     margin-bottom: 0.5rem;
@@ -174,58 +174,17 @@ main {
   &:hover {
     cursor: pointer;
     box-shadow: inset 0px 0px 2em rgba(0,0,0,0.6);
-    // color: #000;
   }
 }
 
-#profile {
-  background-color: $color1;
-  &:hover {
-    // background-color: lighten($color1, 20%);
-  }
-}
-
-#experience {
-  background-color: $color2;
-  &:hover {
-    // background-color: lighten($color2, 20%);
-  }
-}
-
-#education {
-  background-color: $color3;
-  &:hover {
-    // background-color: lighten($color3, 20%);
-  }
-}
-
-#blog {
-  background-color: $color4;
-  &:hover {
-    // background-color: lighten($color4, 20%);
-  }
-}
-
-#social-menu {
-  background-color: $color5;
-  &:hover {
-    // background-color: lighten($color5, 20%);
-  }
-}
-
-#contact {
-  background-color: $color6;
-  &:hover {
-    // background-color: lighten($color6, 20%);
-  }
-}
-
-#portfolio {
-  background-color: $color7;
-  &:hover {
-    // background-color: lighten($color7, 20%);
-  }
-}
+// Box Colors
+#profile {background-color: $color1;}
+#experience {background-color: $color2;}
+#education {background-color: $color3;}
+#blog {background-color: $color4;}
+#social-menu {background-color: $color5;}
+#contact {background-color: $color6;}
+#portfolio {background-color: $color7;}
 
 
 /*========================================

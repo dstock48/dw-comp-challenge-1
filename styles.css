@@ -117,7 +117,7 @@ main {
   color: #fff;
   width: 33.3333%;
   height: 33.3333vh;
-  transition: all 200ms; }
+  transition: box-shadow 200ms; }
   .box i {
     font-size: 4em;
     margin-bottom: 0.5rem; }
