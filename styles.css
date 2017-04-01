@@ -74,7 +74,7 @@ main {
   padding: 2em; }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   text-transform: uppercase;
   margin: 0;
   letter-spacing: 0.04em; }
@@ -82,18 +82,18 @@ h1 {
 .tagline {
   font-weight: 200;
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.8;
   letter-spacing: 0.02rem;
-  margin: .7rem 0 1rem; }
+  margin: .7rem 0; }
 
 button {
   border: 2px solid #fff;
   background-color: transparent;
   color: inherit;
-  padding: 1.2em 1.5em;
+  padding: 1em 1.5em;
   font-size: 0.8em;
   letter-spacing: 0.02rem;
-  margin-right: 1em;
+  margin-right: 0.8em;
   text-transform: uppercase;
   transition: all 200ms; }
   button:hover {
@@ -133,25 +133,25 @@ button {
     border: 0.7em solid #fff; }
 
 #profile {
-  background-color: #3095cd; }
+  background-color: #EABF52; }
 
 #experience {
-  background-color: #ec736a; }
+  background-color: #2A94C1; }
 
 #education {
-  background-color: #c675c9; }
+  background-color: #FF5151; }
 
 #blog {
-  background-color: #e7b855; }
+  background-color: #70C1B3; }
 
 #social-menu {
-  background-color: #e38b3a; }
+  background-color: #FF863F; }
 
 #contact {
-  background-color: #0D9B93; }
+  background-color: #8858B5; }
 
 #portfolio {
-  background-color: #0E4A5D; }
+  background-color: #FF637B; }
 
 /*========================================
 >>>>>>>  M-E-D-I-A  Q-U-E-R-I-E-S  <<<<<<<
@@ -159,7 +159,7 @@ button {
 @media (min-width: 1450px) {
   body {
     font-size: 20px; } }
-@media (min-width: 2000px) {
+@media (min-width: 1850px) {
   body {
     font-size: 25px; } }
 @media (min-width: 2400px) {

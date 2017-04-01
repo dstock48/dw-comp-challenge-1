@@ -1,10 +1,11 @@
-$color1: #3095cd;
-$color2: #ec736a;
-$color3: #c675c9;
-$color4: #e7b855;
-$color5: #e38b3a;
-$color6: #0D9B93;
-$color7: #0E4A5D;
+$color1: #35BC7A;
+$color2: #EABF52;
+$color3: #2A94C1;
+$color4: #FF5151;
+$color5: #70C1B3;
+$color6: #FF863F;
+$color7: #8858B5;
+$color8: #FF637B;
 
 /*=======================================
 >>>>>  G-E-N-E-R-A-L  S-T-Y-L-E-S  <<<<<<
@@ -95,13 +96,13 @@ main {
   justify-content: center;
   width: 66.6666%;
   height: 33.3333vh;
-  background-color: #35BC7A;
+  background-color: $color1;
   color: #fff;
   padding: 2em;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   text-transform: uppercase;
   margin: 0;
   letter-spacing: 0.04em;
@@ -110,25 +111,25 @@ h1 {
 .tagline {
   font-weight: 200;
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.8;
   letter-spacing: 0.02rem;
-  margin: .7rem 0 1rem;
+  margin: .7rem 0;
 }
 
 button {
   border: 2px solid #fff;
   background-color: transparent;
   color: inherit;
-  padding: 1.2em 1.5em;
+  padding: 1em 1.5em;
   font-size: 0.8em;
   letter-spacing: 0.02rem;
-  margin-right: 1em;
+  margin-right: 0.8em;
   text-transform: uppercase;
   transition: all 200ms;
 
   &:hover {
     background-color: #fff;
-    color: #35BC7A;
+    color: $color1;
     cursor: pointer;
   }
   i {
@@ -173,13 +174,13 @@ button {
 }
 
 // Box Colors
-#profile {background-color: $color1;}
-#experience {background-color: $color2;}
-#education {background-color: $color3;}
-#blog {background-color: $color4;}
-#social-menu {background-color: $color5;}
-#contact {background-color: $color6;}
-#portfolio {background-color: $color7;}
+#profile {background-color: $color2;}
+#experience {background-color: $color3;}
+#education {background-color: $color4;}
+#blog {background-color: $color5;}
+#social-menu {background-color: $color6;}
+#contact {background-color: $color7;}
+#portfolio {background-color: $color8;}
 
 
 /*========================================
@@ -193,8 +194,8 @@ button {
   }
 }
 
-//  2000 and over
-@media (min-width: 2000px) {
+//  1850 and over
+@media (min-width: 1850px) {
   body {
     font-size: 25px;
   }
