@@ -170,6 +170,7 @@ button {
   &:hover {
     cursor: pointer;
     border: 0.7em solid #fff;
+    box-shadow: inset 0 0 1.5em rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -271,10 +272,17 @@ button {
   }
 }
 
+// under 550px width
+@media (max-width: 550px) {
+  .tagline {
+    font-size: 1em;
+  }
+}
+
 // under 550px height
 @media (max-height: 550px) {
   #info {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -310,6 +318,7 @@ button {
   .tagline {
     font-size: 0.9em;
     width: 200px;
+    line-height: 1.4;
   }
 
   .line1 {
@@ -321,7 +330,7 @@ button {
     width: 100%;
     margin: 0;
     padding: 0.8em 0.4em;
-    font-size: 1em;
+    font-size: .9em;
     &:first-child {
       margin-bottom: 1em;
     }
