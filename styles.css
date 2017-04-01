@@ -1,14 +1,10 @@
-/*========================================
->>>>>  C-O-L-O-R  V-A-R-I-A-B-L-E-S  <<<<<
-========================================*/
 /*=======================================
 >>>>>  G-E-N-E-R-A-L  S-T-Y-L-E-S  <<<<<<
 ========================================*/
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box; }
-
-html {
-  height: 100%; }
 
 body {
   font-family: 'Muli', sans-serif;
@@ -30,34 +26,39 @@ main {
   background-position: center;
   color: #fff;
   order: 1; }
-  .slideshow .page-dots {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 1em;
-    cursor: pointer;
-    font-size: .8em; }
-    .slideshow .page-dots i {
-      opacity: .3;
-      margin-left: .3rem; }
-      .slideshow .page-dots i:hover {
-        opacity: .6; }
-      .slideshow .page-dots i.active {
-        opacity: .8; }
-  .slideshow .arrow {
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3em;
+
+.page-dots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  font-size: .8em;
+  cursor: default; }
+  .page-dots i {
     opacity: .3;
-    position: absolute;
-    padding: 1rem; }
-    .slideshow .arrow:hover {
-      opacity: 0.8;
+    margin-left: .3rem; }
+    .page-dots i:hover {
+      opacity: .6;
       cursor: pointer; }
-  .slideshow #left-arrow {
-    left: 0; }
-  .slideshow #right-arrow {
-    right: 0; }
+    .page-dots i.active {
+      opacity: .8; }
+
+.arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3em;
+  opacity: .3;
+  position: absolute;
+  padding: 1rem; }
+  .arrow:hover {
+    opacity: 0.8;
+    cursor: pointer; }
+
+#left-arrow {
+  left: 0; }
+
+#right-arrow {
+  right: 0; }
 
 /*=======================================
 >>>>>>>>>  P-R-I-M-A-R-Y  B-O-X  <<<<<<<<
@@ -71,19 +72,21 @@ main {
   background-color: #35BC7A;
   color: #fff;
   padding: 2em; }
-  #info h1 {
-    font-size: 2em;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 0.04em; }
-  #info .tagline {
-    font-weight: 200;
-    font-size: 1em;
-    line-height: 1.4;
-    letter-spacing: 0.02rem;
-    margin: .7rem 0 1rem; }
 
-.buttons button {
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.04em; }
+
+.tagline {
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 1.4;
+  letter-spacing: 0.02rem;
+  margin: .7rem 0 1rem; }
+
+button {
   border: 2px solid;
   background-color: transparent;
   color: inherit;
@@ -93,12 +96,12 @@ main {
   margin-right: 1em;
   text-transform: uppercase;
   transition: all 200ms; }
-  .buttons button:hover {
+  button:hover {
     background-color: #fff;
     border-color: #fff;
     color: #35BC7A;
     cursor: pointer; }
-  .buttons button i {
+  button i {
     margin-right: .5em; }
 
 /*=======================================
@@ -154,7 +157,7 @@ main {
 /*========================================
 >>>>>>>  M-E-D-I-A  Q-U-E-R-I-E-S  <<<<<<<
 ========================================*/
-@media (min-width: 1300px) {
+@media (min-width: 1450px) {
   body {
     font-size: 20px; } }
 @media (min-width: 2000px) {
@@ -164,7 +167,7 @@ main {
   body {
     font-size: 30px; } }
 @media (max-width: 1175px) {
-  #info .tagline {
+  .tagline {
     font-size: 0.83em; } }
 @media (max-width: 1024px) {
   main {
@@ -172,10 +175,10 @@ main {
 
   .slideshow {
     height: 50vh;
-    width: 100vw;
-    order: -1; }
+    width: 100%;
+    order: 0; }
 
-  .buttons button {
+  button {
     padding: 1.1em 1.7em;
     font-size: 1em; }
 
@@ -194,53 +197,59 @@ main {
     width: 100%;
     font-size: 1em;
     height: 50vh; }
-    #info h1 {
-      font-size: 2.5em; }
-    #info .tagline {
-      display: inline-block;
-      font-size: 1.4em; }
+
+  h1 {
+    font-size: 2.5em; }
+
+  .tagline {
+    display: inline-block;
+    font-size: 1.4em; }
 
   #profile {
     width: 100%; } }
-@media (max-width: 600px) {
-  #info .tagline {
-    font-size: 1em; } }
+@media (max-width: 625px) {
+  .tagline {
+    font-size: 1.2em; } }
 @media (max-height: 550px) {
   #info {
     font-size: 12px; } }
 @media (max-height: 420px) {
   #info {
     font-size: 10px; }
-    #info .tagline {
-      font-size: 1.3em; }
 
-  .buttons button {
+  .tagline {
+    font-size: 1.3em; }
+
+  button {
     font-size: 1.2em; }
 
-  .boxes .box {
+  .box {
     font-size: 8px;
     min-height: 0; }
-    .boxes .box h3 {
-      font-size: 10px; } }
+
+  h3 {
+    font-size: 10px; } }
 @media (max-width: 450px) {
-  #info h1 {
+  h1 {
     font-size: 1.5em; }
-  #info .tagline {
+
+  .tagline {
     font-size: 0.9em;
     width: 200px; }
-    #info .tagline .line1 {
-      display: inline-block;
-      margin-bottom: .5em; }
 
-  .buttons button {
+  .line1 {
+    display: inline-block;
+    margin-bottom: .5em; }
+
+  button {
     width: 100%;
     margin: 0;
     padding: 0.8em 0.4em;
     font-size: 1em; }
-    .buttons button:first-child {
-      margin-bottom: 1em; } }
-@media (max-width: 350px) {
-  .buttons button {
-    padding: 1em .5em; } }
+    button:first-child {
+      margin-bottom: 1em; }
+
+  .box {
+    font-size: .75em; } }
 
 /*# sourceMappingURL=styles.css.map */
