@@ -42,7 +42,7 @@ $('.page-dots').on('click', function(e){
 })
 
 function changeSlide(counter) {
-  $('.slideshow').css('background-image', 'url("images/' + counter+ '.jpg")')
+  $('.slideshow').css('background-image', 'url("images/' + counter + '.jpg")')
   $('.page-dots').find('.active').removeClass('active');
   $('.page-dots i:nth-child(' + counter + ')').addClass('active');
 }
