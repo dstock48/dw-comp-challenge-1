@@ -46,3 +46,12 @@ function changeSlide(counter) {
   $('.page-dots').find('.active').removeClass('active');
   $('.page-dots i:nth-child(' + counter + ')').addClass('active');
 }
+
+setInterval(function(){
+  if (counter < 3) {
+    counter++;
+  } else {
+    counter = 1
+  }
+  changeSlide(counter);
+}, 8000);
