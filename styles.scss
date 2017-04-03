@@ -312,6 +312,7 @@ button {
 
   .tagline {
     font-size: 1.3em;
+    margin: 0.5em auto;
   }
 
   button {
@@ -319,8 +320,12 @@ button {
   }
 
   .box {
-    font-size: 8px;
+    font-size: .8em;
     min-height: 0;
+
+    i {
+      font-size: 3em;
+    }
   }
 
   h3 {

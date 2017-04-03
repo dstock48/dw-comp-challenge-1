@@ -234,14 +234,17 @@ button {
     font-size: 10px; }
 
   .tagline {
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    margin: 0.5em auto; }
 
   button {
     font-size: 1.2em; }
 
   .box {
-    font-size: 8px;
+    font-size: .8em;
     min-height: 0; }
+    .box i {
+      font-size: 3em; }
 
   h3 {
     font-size: 10px; } }
